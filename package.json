@@ -1,0 +1,12 @@
+{
+  "name": "node-oauth-example",
+  "version": "1.0.0",
+  "description": "An example of oAuth2.0 using node",
+  "main": "index.js",
+  "repository": "https://githubb.com/sohamkamani/node-oauth-example",
+  "author": "sohamkamani",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
