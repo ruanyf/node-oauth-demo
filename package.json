@@ -1,13 +1,16 @@
 {
-  "name": "node-oauth-example",
+  "name": "node-oauth-demo",
   "version": "1.0.0",
   "description": "An example of oAuth2.0 using node",
   "main": "index.js",
-  "repository": "https://githubb.com/sohamkamani/node-oauth-example",
+  "repository": "https://githubb.com/ruanyf/node-oauth-demo",
   "author": "sohamkamani",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "koa": "^2.7.0",
+    "koa-route": "^3.2.0",
+    "koa-static": "^5.0.0"
   }
 }

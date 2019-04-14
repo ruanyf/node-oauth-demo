@@ -15,10 +15,12 @@
 	// We can get the token from the "access_token" query
 	// param, available in the browsers "location" global
 	const query = window.location.search.substring(1)
-	const token = query.split('access_token=')[1]
+	const name = query.split('name=')[1]
 
 	// Call the user info API using the fetch browser library
-	fetch('//api.github.com/user', {
+/*
+	fetch('https://api.github.com/user', {
+      method: 'GET',
 			headers: {
 				// Include the token in the Authorization header
 				Authorization: 'token ' + token
@@ -30,9 +32,14 @@
 			// Once we get the response (which has many fields)
 			// Documented here: https://developer.github.com/v3/users/#get-the-authenticated-user
 			// Write "Welcome <user name>" to the documents body
-			const nameNode = document.createTextNode(`Welcome, ${res.name}`)
-			document.body.appendChild(nameNode)
-		})
+      */
+      const title = document.createTextNode(`Welcome, ${decodeURIComponent(name)}`);
+			document.body.appendChild(title);
+
+      // const textarea = document.createElement('div');
+      // textarea.innerHTML = `<textarea style="width: 400px; height: 200px;">${JSON.stringify(res, null, 2)}</textarea>`;
+      // document.body.appendChild(textarea);
+// 		})
 </script>
 
 </html>
