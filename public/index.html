@@ -4,14 +4,24 @@
 <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Node oAuth2 Example</title>
+        <title>Node OAuth2 Demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
-        <!-- <script src="main.js"></script> -->
 </head>
 
 <body>
-        <a href="https://github.com/login/oauth/authorize?client_id=7e015d8ce32370079895&redirect_uri=http://localhost:8080/oauth/redirect">Login with github</a>
+        <a id="login">Login with GitHub</a>
+
+<script>
+  // fill in your cliend_id
+  const client_id = '7e015d8ce32370079895';
+
+  const authorize_uri = 'https://github.com/login/oauth/authorize';
+  const redirect_uri = 'http://localhost:8080/oauth/redirect';
+
+  const link = document.getElementById('login');
+  link.href = `${authorize_uri}?client_id=${client_id}&redirect_uri=${redirect_uri}`;
+</script>
+
 </body>
 
 </html>

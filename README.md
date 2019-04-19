@@ -1,13 +1,44 @@
-## Node.js OAuth example
+A very simple demo of OAuth 2.0 using Node.js，to add GitHub login to your app and access GitHub API.
 
-Read the blog post [here](https://www.sohamkamani.com/blog/javascript/2018-06-24-oauth-with-node-js/)
+This demo is slightly modified from sohamkamani's [node-oauth-example](https://github.com/sohamkamani/node-oauth-example). More details in his [blog](https://www.sohamkamani.com/blog/javascript/2018-06-24-oauth-with-node-js/).
 
-This is an example node application that implements Githubs OAuth2 API.
+## Step one: register the app
 
-In order to run the application:
+Register the app on Github : https://github.com/settings/applications/new .
 
-1. Register your new application on Github : https://github.com/settings/applications/new. In the "callback URL" field, enter "http://localhost:8080/oauth/redirect". Once you register, you will get a client ID and client secret.
-2. Replace the values of the `clientID` and `clientSecret` variables in the [index.js](/index.js) file 
-3. Install dependencies by executing: `npm install` or `yarn`.
-4. Start the server by executing `node index.js`
-5. Navigate to http://localhost:8080 on your browser.
+- "Application name" field, enter any name you like.
+- "Homepage URL" field, enter "http://localhost:8080/ ".
+- "callback URL" field, enter "http://localhost:8080/oauth/redirect ".
+
+Once register, you will get a client ID and a client secret.
+
+## Step two: get the code
+
+First, clone the repo.
+
+```bash
+$ git clone git@github.com:ruanyf/node-oauth-demo.git
+$ cd node-oauth-demo
+```
+
+Second, modify the config.
+
+- `index.js`: replace the values of the `clientID` and `clientSecret` variables.
+- `public/index.html`: replace the values of the `client_id` variable.
+
+Third, install the dependencies.
+
+```bash
+$ npm install
+```
+
+## Step three: run the server
+
+Now, run the server.
+
+```bash
+$ node index.js
+```
+
+Visit http://localhost:8080 in your browser, and click the link to login GitHub.
+
